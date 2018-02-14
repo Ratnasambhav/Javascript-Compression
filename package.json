@@ -1,0 +1,35 @@
+{
+  "name": "seek_and_compress",
+  "version": "0.0.1",
+  "description": "I scrap websites and store them in compressed form using the compression algorithm which results in the best compression ratio. Only text data is supported right now. Feel free to add support for more.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./start.js --ignore public/"
+  },
+  "author": "Ratnasambhav Priyadarshi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.15.3",
+    "body-parser": "1.17.1",
+    "cheerio": "^1.0.0-rc.2",
+    "connect-flash": "0.1.1",
+    "connect-mongo": "1.3.2",
+    "cookie-parser": "1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "express-session": "1.15.1",
+    "express-validator": "3.1.2",
+    "forever": "0.15.3",
+    "glob": "7.1.1",
+    "mongoose": "4.8.7",
+    "mongoose-mongodb-errors": "0.0.2",
+    "pug": "2.0.0-beta6",
+    "query-string": "^5.0.0",
+    "request": "^2.83.0",
+    "slugs": "^0.1.3"
+  },
+  "devDependencies": {
+    "concurrently": "3.4.0",
+    "nodemon": "1.11.0"
+  }
+}

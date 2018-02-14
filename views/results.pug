@@ -1,0 +1,22 @@
+extend layout
+
+include mixins/_algoCard
+
+block content
+  div.input
+    p= data.text
+  center
+    h3 Best Algorithm is #{bestAlgo}
+  div.output
+    +algoCard(data.riceData)
+    +algoCard(data.rleData)
+    +algoCard(data.huffmanData)
+    +algoCard(data.huffman_rleData)
+    +algoCard(data.rice_rleData)
+  center
+    form(action="/save" method="POST")
+      input.hidden(type="text" name="name" value=`${saveThis.name}`)
+      input.hidden(type="text" name="algoName" value=`${saveThis.algoName}`)
+      input.hidden(type="text" name="compressed" value=`${saveThis.compressed}`)
+      input.hidden(type="text" name="code" value=`${JSON.stringify(saveThis.code) || -1}`)
+      input.save(type="submit" value="Save to Database")

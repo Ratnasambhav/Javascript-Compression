@@ -1,0 +1,9 @@
+extends layout
+
+include mixins/_savedCard
+
+block content
+  center
+    h2 Saved Data
+  each data in saves
+    +savedCard(data)

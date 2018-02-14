@@ -1,0 +1,5 @@
+extend layout
+
+block content
+  textarea(cols="100", rows="10")=`${data.decompressed}`
+  pre= `${data.decompressionTime[0]}s ${data.decompressionTime[1]}ns`

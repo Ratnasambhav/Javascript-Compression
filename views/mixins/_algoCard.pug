@@ -1,0 +1,12 @@
+mixin algoCard(data)
+  div.algoCard
+    center
+      h3.title= data[0]
+    ul
+      textarea(name="compressed", cols="145", rows="10")=`${data[1].compressed}`
+      p Compression Ratio:
+      pre=` ${data[1].ratio}`
+      p Compression Time:
+      pre=` ${data[1].compressionTime[0]}s ${data[1].compressionTime[1]}ns`
+      p Decompression Time:
+      pre=` ${data[2].decompressionTime[0]}s ${data[2].decompressionTime[1]}ns`

@@ -1,0 +1,26 @@
+html
+  head
+    title= `Seek and Compress`
+    link(rel='stylesheet', href='style.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    block header
+      header.top
+        nav.nav
+            li.nav__item
+              a(href="/") Home 🏠
+            li.nav__item
+              a(href="/saved") 💾 Saved
+
+    block messages
+      if locals.flashes
+        .flash-messages
+          - const categories = Object.keys(locals.flashes)
+          each category in categories
+            each message in flashes[category]
+              .flash(class=`flash--${category || 'success'}`)
+                p.flash__text!= message
+                button.flash__remove(onClick="this.parentElement.remove()") &times;
+
+    .content
+      block content

@@ -1,0 +1,9 @@
+extend layout
+
+block content
+  form(action="/url" method="POST" class="url__form")
+    input(type="text" placeholder="Enter the URL" name="url" class="url__feild")
+    input(type="submit" value="GO" class="url__submit")
+  form(action="/text" method="POST" class="text__form")
+    textarea(name="text", cols="30", rows="10" placeholder="Enter the URL" class="text__feild")
+    input(type="submit" value="GO" class="text__submit")

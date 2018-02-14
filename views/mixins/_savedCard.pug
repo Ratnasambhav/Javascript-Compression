@@ -1,0 +1,15 @@
+mixin savedCard(data)
+  div.savedCard
+    a(href=`/results/${data._id}` target="blank")
+      p.name= data.name
+    case data.algoName
+      when 'rice'
+        p.algoName Rice Encoding
+      when 'rle'
+        p.algoName Run Length Encoding
+      when 'huffman'
+        p.algoName Huffman Encoding
+      when 'huffman_rle'
+        p.algoName Huffman-RLE Hybrid Encoding
+      when 'rice_rle'
+        p.algoName Rice-RLE Hybrid Encoding
